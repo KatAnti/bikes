@@ -1,0 +1,32 @@
+@mixin main-text {
+  font-family: "OpenSans", "Helvetica", sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+  color: $text-dark;
+}
+
+@mixin pseudo($top, $left, $width, $height) {
+  content: "";
+  display: block;
+  position: absolute;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+}
+
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin wrapper($width) {
+  width: $width;
+  margin: 0 auto;
+}
