@@ -1,9 +1,9 @@
 'use strict';
 
-const menu = document.querySelector('.main-nav');
-const menuToggle = document.querySelector('.header__menu-button');
-const logoWrapper = document.querySelector('.header__logo-wrapper');
-const body = document.querySelector('body');
+var menu = document.querySelector('.main-nav');
+var menuToggle = document.querySelector('.header__menu-button');
+var logoWrapper = document.querySelector('.header__logo-wrapper');
+var body = document.querySelector('body');
 
 menu.classList.remove('main-nav--nojs');
 menuToggle.classList.remove('header__menu-button--nojs');
