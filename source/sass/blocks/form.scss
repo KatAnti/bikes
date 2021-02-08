@@ -20,11 +20,15 @@
   color: $text-light;
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 30px;
+    margin-bottom: 31px;
     font-size: 18px;
     line-height: 28px;
     color: $text-dark;
     letter-spacing: -0.005em;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 19px;
   }
 }
 
@@ -45,8 +49,17 @@
     color: $input-text;
   }
 
+  &:hover,
+  &:focus {
+    border: 1px solid $emphasis;
+  }
+
   @media (max-width: $tablet-width) {
     padding-left: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 25px;
   }
 }
 

@@ -1,9 +1,16 @@
 .contacts h2 {
   @include main-title($title-dark);
   margin-bottom: 30px;
+  margin-left: -10px;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 20px;
+    margin-left: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 
@@ -32,6 +39,11 @@
   width: 100%;
   height: 530px;
   margin-bottom: 40px;
+  background-color: #d3cdb8;
+  background-image: url("../img/map-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 
   @media (max-width: $tablet-width) {
     height: 545px;
@@ -41,7 +53,17 @@
   @media (max-width: $mobile-width) {
     height: 250px;
     margin-bottom: 31px;
+    background-image: url("../img/map-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-mobile@2x.jpg");
+    }
   }
+}
+
+.contacts__map iframe {
+  width: 100%;
+  height: 100%;
 }
 
 .contacts__links {

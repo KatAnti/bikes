@@ -1,0 +1,117 @@
+.bikes-video {
+  background: $dark-background linear-gradient(0deg, #ffffff 0, #ffffff 106px, $dark-background 106px);
+
+  @media (max-width: $tablet-width) {
+    background: $dark-background linear-gradient(0deg, #ffffff 0, #ffffff 95px, $dark-background 95px);
+  }
+
+  @media (max-width: $mobile-width) {
+    background: $dark-background linear-gradient(0deg, #ffffff 0, #ffffff 59px, $dark-background 59px);
+  }
+}
+
+.bikes-video__wrapper {
+  @include wrapper(929px);
+  padding-top: 96px;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 132px;
+    padding-right: 132px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 62px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.bikes-video__wrapper h2 {
+  @include main-title(#ffffff);
+  margin-left: -10px;
+  margin-bottom: 19px;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: -10px;
+  }
+}
+
+.bikes-video__wrapper p {
+  max-width: 340px;
+  margin: 0 auto;
+  margin-bottom: 55px;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: $text-extra-light;
+  letter-spacing: -0.005em;
+
+  @media (max-width: $tablet-width) {
+    max-width: 100%;
+    margin-bottom: 42px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 55px;
+    padding: 0;
+    letter-spacing: -0.03em;
+  }
+}
+
+.bikes-video__preview {
+  position: relative;
+  text-align: center;
+}
+
+.bikes-video__preview img {
+  object-fit: cover;
+}
+
+.bikes-video__play-button {
+  @include size(65px, 65px);
+  position: absolute;
+  top: calc(50% - 35px);
+  left: calc(50% - 32px);
+  border: none;
+  border-radius: 90px;
+  background-color: $emphasis;
+
+  &::before {
+    @include pseudo(calc(50% - 9px), calc(50% - 5px), 0, 0);
+    border-style: solid;
+    border-width: 9px 0 9px 13px;
+    border-color: transparent transparent transparent #070707;
+  }
+
+  @media (max-width: $tablet-width) {
+    @include size(90px, 90px);
+    top: calc(50% - 50px);
+    left: calc(50% - 45px);
+
+    &::before {
+      top: calc(50% - 12px);
+      left: calc(50% - 5px);
+      border-width: 12.5px 0 12.5px 18px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    @include size(65px, 65px);
+    top: calc(50% - 38px);
+    left: calc(50% - 32px);
+
+    &::before {
+      top: calc(50% - 9px);
+      left: calc(50% - 5px);
+      border-width: 9px 0 9px 13px;
+    }
+  }
+}

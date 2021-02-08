@@ -1,0 +1,110 @@
+.bikes-card {
+  width: 30.5%;
+
+  &:nth-of-type(3n + 2) {
+    position: relative;
+    top: 60px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 270px;
+
+    &:nth-child(2n + 3) {
+      top: 0;
+    }
+  }
+}
+
+.bikes-card__preview {
+  position: relative;
+  display: block;
+
+  &--back-circle::before {
+    @include pseudo(calc(50% - 90px), -60px, 180px, 180px);
+    border: 27px solid $emphasis;
+    border-radius: 180px;
+    z-index: 0;
+  }
+
+  &--squares::before,
+  &--squares::after {
+    @include pseudo(auto, auto, 47px, 47px);
+    border: 8px solid $emphasis;
+    z-index: 2;
+  }
+
+  &--squares::before {
+    top: -18px;
+    left: -19px;
+  }
+
+  &--squares::after {
+    bottom: -23px;
+    right: -23px;
+  }
+
+  &--circle::before {
+    @include pseudo(-32px, auto, 95px, 95px);
+    right: -36px;
+    border: 17px solid $emphasis;
+    border-radius: 95px;
+    z-index: 2;
+  }
+
+  @media (max-width: $tablet-width) {
+    height: 300px;
+
+    &--squares::before,
+    &--squares::after {
+      display: none;
+    }
+
+    &--back-circle::before {
+      @include size(127px, 127px);
+      top: auto;
+      bottom: -28px;
+      left: -37px;
+      border-width: 18px;
+    }
+
+    &--circle::before {
+      @include size(68px, 68px);
+      top: -20px;
+      right: -25px;
+      border-width: 13px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    &--back-circle::before {
+      left: -24px;
+    }
+
+    &--circle::before {
+      right: -15px;
+    }
+  }
+}
+
+.bikes-card img {
+  position: relative;
+  border-radius: 10px;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.bikes-card h3 {
+  display: block;
+  margin-top: 13px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 34px;
+  text-align: center;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 20px;
+  }
+}

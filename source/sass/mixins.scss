@@ -1,5 +1,5 @@
 @mixin main-text {
-  font-family: "OpenSans", "Helvetica", sans-serif;
+  font-family: "OpenSans", "Arial", sans-serif;
   font-size: 20px;
   line-height: 32px;
   color: $text-dark;
@@ -27,7 +27,7 @@
 }
 
 @mixin wrapper($width) {
-  width: $width;
+  max-width: $width;
   margin: 0 auto;
 }
 
@@ -40,9 +40,5 @@
 
   @media (max-width: $tablet-width) {
     font-size: 24px;
-  }
-
-  @media (max-width: $mobile-width) {
-    font-size: 18px;
   }
 }
