@@ -74,4 +74,12 @@
   font-size: 15px;
   line-height: 21px;
   cursor: pointer;
+
+  &:hover {
+    background-color: lighten($emphasis, 10%);
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }

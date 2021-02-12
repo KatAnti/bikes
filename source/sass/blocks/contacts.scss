@@ -90,10 +90,15 @@
 
   @media (max-width: $mobile-width) {
     max-width: 100%;
-    margin-bottom: 22px;
+    margin-bottom: 23px;
 
     &:nth-child(odd) {
+      margin-left: 7px;
       margin-right: 0;
+    }
+
+    &:nth-child(even) {
+      margin-left: -9px;
     }
   }
 }

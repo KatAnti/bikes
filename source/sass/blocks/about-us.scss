@@ -39,11 +39,14 @@
   counter-reset: factCounter;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 
   font-size: 22px;
   line-height: 34px;
   text-align: center;
+
+  @media (max-width: $tablet-width) {
+    flex-wrap: wrap;
+  }
 
   @media (max-width: $mobile-width) {
     font-size: 18px;
@@ -58,6 +61,10 @@
   padding-top: 55px;
   max-width: 263px;
   letter-spacing: -0.5px;
+
+  &:not(:nth-child(4n)) {
+    margin-right: 2%;
+  }
 
   &::before {
     counter-increment: factCounter;
@@ -75,8 +82,22 @@
     text-align: center;
   }
 
+  @media (max-width: $tablet-width) {
+    &:not(:nth-child(4n)) {
+      margin-right: 0;
+    }
+
+    &:nth-child(odd) {
+      margin-right: 20px;
+    }
+  }
+
   @media (max-width: $mobile-width) {
     width: 100%;
     padding-top: 49px;
+
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
   }
 }

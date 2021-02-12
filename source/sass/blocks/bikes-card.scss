@@ -7,17 +7,31 @@
   }
 
   @media (max-width: $tablet-width) {
-    width: 270px;
+    width: 42%;
+    min-width: 270px;
 
     &:nth-child(2n + 3) {
       top: 0;
     }
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 60%;
+    min-width: 270px;
   }
 }
 
 .bikes-card__preview {
   position: relative;
   display: block;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.9;
+  }
 
   &--back-circle::before {
     @include pseudo(calc(50% - 90px), -60px, 180px, 180px);
@@ -92,6 +106,7 @@
 
   @media (max-width: $tablet-width) {
     width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 }

@@ -83,6 +83,15 @@
   border: none;
   border-radius: 90px;
   background-color: $emphasis;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($emphasis, 10%);
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 
   &::before {
     @include pseudo(calc(50% - 9px), calc(50% - 5px), 0, 0);

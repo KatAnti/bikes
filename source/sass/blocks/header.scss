@@ -71,6 +71,14 @@
 .header__menu-button {
   display: none;
 
+  &:hover {
+    background-color: lighten($emphasis, 10%);
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
   @media (max-width: $tablet-width) {
     @include size(50px, 50px);
     display: block;

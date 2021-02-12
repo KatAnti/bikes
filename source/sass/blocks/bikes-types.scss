@@ -19,8 +19,8 @@
     width: 100%;
     padding-top: 36px;
     padding-bottom: 16px;
-    padding-left: 65px;
-    padding-right: 65px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
   @media (max-width: $mobile-width) {
@@ -41,7 +41,14 @@
 .bikes-types__card {
   margin-bottom: 30px;
 
+  @media (max-width: $tablet-width) {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
   @media (max-width: $mobile-width) {
     margin-bottom: 19px;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
