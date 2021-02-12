@@ -138,7 +138,8 @@ a {
       margin-bottom: 0; } }
 
 .header__menu-button {
-  display: none; }
+  display: none;
+  cursor: pointer; }
   .header__menu-button:hover {
     background-color: #21f5e1; }
   .header__menu-button:active {
