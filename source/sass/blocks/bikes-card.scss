@@ -91,6 +91,7 @@
 
   @media (max-width: $mobile-width) {
     padding-top: 111%;
+
     &--back-circle::before {
       left: -24px;
     }
